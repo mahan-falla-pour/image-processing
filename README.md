@@ -2,7 +2,7 @@
 
 Implementation of classical image processing algorithms based on **"Digital Image Processing" by Gonzalez & Woods (3rd Edition)**.
 
-The course is divided into three homework assignments, each covering a different set of chapters from the book.
+The course is divided into three homework assignments, each covering a different set of topics from the book.
 
 ---
 
@@ -29,15 +29,21 @@ Covers color image processing, noise reduction, and image quality metrics.
 | Question | Topic |
 |----------|-------|
 | Q1 | RGB and HSI color space decomposition |
-| Q2 | Grayscale image colorization (two methods) |
-| Q3 | PSNR calculation (manual vs OpenCV) |
-| Q4 | Median filter for image reconstruction |
-| Q5 | DCT quantization and Run-Length Coding (RLC) |
+| Q2 | Grayscale image colorization using reference images (two methods) |
+| Q3 | PSNR calculation from scratch (manual vs `cv2.PSNR` verification) |
+| Q4 | Noise type identification, median filter reconstruction, and PSNR evaluation |
+| Q5 | JPEG compression: DCT quantization, zig-zag scan, and Run-Length Coding (RLC) |
 
 ---
 
-### Part 3 — Coming Soon
-Frequency domain processing and morphological operations.
+### [Part 3](./part3) — Morphology, Segmentation & Analysis
+Covers morphological operations, image segmentation, and feature extraction.
+
+| Question | Topic |
+|----------|-------|
+| Q1 | Object boundary extraction via morphological erosion |
+| Q2 | Image segmentation using Otsu's thresholding, CCL, and region merging |
+| Q3 | Cell detection, counting (149 cells), and feature extraction from microscopy images |
 
 ---
 
@@ -52,7 +58,7 @@ Frequency domain processing and morphological operations.
 Install dependencies:
 
 ```bash
-pip install numpy pillow matplotlib opencv-python
+pip install numpy pillow matplotlib opencv-python openpyxl pandas
 ```
 
 ---
@@ -67,9 +73,12 @@ python Q2/Q2.py
 # ...
 ```
 
-**Part 2** — Jupyter Notebook:
+**Parts 2 & 3** — Jupyter Notebook:
 ```bash
 cd part2
+jupyter notebook Untitled.ipynb
+
+cd part3
 jupyter notebook Untitled.ipynb
 ```
 
